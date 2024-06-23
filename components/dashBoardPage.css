@@ -66,12 +66,6 @@ small {
 	color: #2D3748;
 }
 
-.profile-photo {
-	width: 2.8rem;
-	height: 2.8rem;
-	border-radius: 0.75rem; 
-	overflow: hidden;
-}
 
 p {
 	color: #2D3748;
@@ -91,8 +85,10 @@ b {
 	top: 0;
 	z-index: 1;
 	position: relative; /* Make sure nav is relative to position the pseudo-element correctly */
-
+	
 }
+
+
 
 #nav-bar::after {
 	content: '';
@@ -104,27 +100,34 @@ b {
 	background: linear-gradient(to right, #F8F9FA, #F8F9FA, #D8DBDD, #F8F9FA, #F8F9FA); /* Gradient colors */
 }
 
-#nav-bar .container {
+#nav-bar #container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 1.2rem;
 }
 
-#nav-bar .logo {
+#nav-bar #logo {
 	display: flex;
 	gap: 0.5rem;
 }
 
-#nav-bar .logo img {
+#nav-bar #logo img {
 	width: 2rem;
 	height: 2rem;
 }
 
-#nav-bar .profile {
+#nav-bar #profile {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+}
+
+#nav-bar #profile #profile-photo {
+	width: 2.8rem;
+	height: 2.8rem;
+	border-radius: 0.75rem; 
+	overflow: hidden;
 }
 /* ============================================================================================= */
 

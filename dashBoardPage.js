@@ -71,59 +71,61 @@ export class DashBoardPage extends HTMLElement{
 		this.navElement.setAttribute("id", "nav-bar");
 
 		// ----------------------------- NAV BAR -----------------------------
-		// Adding container div inside nav-bar
-		const containerDiv = document.createElement("div");
-		containerDiv.classList.add("container");
+	// Adding container div inside nav-bar
+	const containerDiv = document.createElement("div");
+	containerDiv.id = "container";
 
-		// Adding logo div inside container
-		const logoDiv = document.createElement("div");
-		logoDiv.classList.add("logo");
+	// Adding logo div inside container
+	const logoDiv = document.createElement("div");
+	logoDiv.id = "logo";
 
-		// Create img element for logo
-		const logoImg = document.createElement("img");
-		logoImg.setAttribute("src", "./images/logo.png");
-		logoDiv.appendChild(logoImg);
+	// Create img element for logo
+	const logoImg = document.createElement("img");
+	logoImg.setAttribute("src", "./images/logo.png");
+	logoDiv.appendChild(logoImg);
 
-		// Create h2 element for dashboard text
-		const dashboardHeading = document.createElement("h2");
-		dashboardHeading.textContent = "DASHBOARD";
-		logoDiv.appendChild(dashboardHeading);
+	// Create h2 element for dashboard text
+	const dashboardHeading = document.createElement("h2");
+	dashboardHeading.textContent = "DASHBOARD";
+	logoDiv.appendChild(dashboardHeading);
 
-		// Append logoDiv to containerDiv
-		containerDiv.appendChild(logoDiv);
+	// Append logoDiv to containerDiv
+	containerDiv.appendChild(logoDiv);
 
-		// Adding profile div inside container
-		const profileDiv = document.createElement("div");
-		profileDiv.classList.add("profile");
+	// Adding profile div inside container
+	const profileDiv = document.createElement("div");
+	profileDiv.id = "profile";
 
-		// Create div.info for profile info
-		const infoDiv = document.createElement("div");
-		infoDiv.classList.add("info");
+	// Create div.info for profile info
+	const infoDiv = document.createElement("div");
+	infoDiv.id = "info";
 
-		// Create p element inside infoDiv
-		const infoText = document.createElement("p");
-		const boldText = document.createElement("b");
-		boldText.textContent = "Prem";
-		infoText.appendChild(boldText);
-		infoDiv.appendChild(infoText);
-		profileDiv.appendChild(infoDiv);
+	// Create p element inside infoDiv
+	const infoText = document.createElement("p");
+	const boldText = document.createElement("b");
+	boldText.textContent = "Prem";
+	infoText.appendChild(boldText);
+	infoDiv.appendChild(infoText);
+	profileDiv.appendChild(infoDiv);
 
-		// Create div.profile-photo for profile photo
-		const profilePhotoDiv = document.createElement("div");
-		profilePhotoDiv.classList.add("profile-photo");
+	// Create div#profile-photo for profile photo
+	const profilePhotoDiv = document.createElement("div");
+	profilePhotoDiv.id = "profile-photo";
 
-		// Create img element for profile photo
-		const profilePhotoImg = document.createElement("img");
-		profilePhotoImg.setAttribute("src", "./images/profile-1.jpg");
-		profilePhotoDiv.appendChild(profilePhotoImg);
-		profileDiv.appendChild(profilePhotoDiv);
+	// Create img element for profile photo
+	const profilePhotoImg = document.createElement("img");
+	profilePhotoImg.setAttribute("src", "./images/profile-1.jpg");
+	profilePhotoDiv.appendChild(profilePhotoImg);
+	profileDiv.appendChild(profilePhotoDiv);
 
-		// Append profileDiv to containerDiv
-		containerDiv.appendChild(profileDiv);
+	// Append profileDiv to containerDiv
+	containerDiv.appendChild(profileDiv);
 
-		// Append containerDiv to navElement
-		this.navElement.appendChild(containerDiv);
+	// Append containerDiv to navElement (assuming this.navElement exists)
+	this.navElement.appendChild(containerDiv);
+
 		// -----------------------------------------------------------------
+
 
 		const css = document.createElement("link");
 		css.setAttribute("rel","stylesheet");
