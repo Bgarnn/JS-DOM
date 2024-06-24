@@ -57,11 +57,11 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width: 2.0rem; /* Adjust the size of the icon container */
-	height: 2.0rem; /* Adjust the size of the icon container */
-	border-radius: 0.75rem; /* Make it circular */
+	width: 2.0rem; 
+	height: 2.0rem; 
+	border-radius: 0.75rem; 
 	background-color: white;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); /* Adding shadow */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); 
 }
 
 #side-bar .menu-item h3 {
@@ -76,6 +76,7 @@
 	padding: 1rem;
 	border-radius: 0.75rem;
 	align-items: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); /* Adding shadow */
 }
 
 #offline-pong i {
@@ -86,9 +87,9 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width: 2.0rem; /* Adjust the size of the icon container */
-	height: 2.0rem; /* Adjust the size of the icon container */
-	border-radius: 0.75rem; /* Make it circular */
+	width: 2.0rem; 
+	height: 2.0rem; 
+	border-radius: 0.75rem; 
 }
 
 #offline-pong #content h3 {
@@ -104,7 +105,7 @@
 }
 
 #offline-pong .btn {
-	margin-top: 0.rem;
+	margin-top: 0rem;
 	width: 100%;
 	height: 2rem;
 	text-align: center;
