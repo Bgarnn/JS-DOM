@@ -49,21 +49,23 @@ border-radius: 0.75rem;
 
 ## Colors
 
-- Font (Default) : dark blue
+- Font (Default) - dark blue
 ```css
 color: #2D3748;
 ```
-- Background (Default) : light gray
+- Background (Default) - light gray
+```css
 background-color: #F8F9FA;
-- Background (Text-box) : white
+```
+- Background (Text-box) - white
 ```css
 color: white;
 ```
-- Background (Non-active) : darker-gray
+- Background (Non-active) - darker-gray
 ```css
 background-color: #C4C4C4;
 ```
-- Theme : green
+- Theme - green
 ```css
 color: #4FD1C5;
 ```
