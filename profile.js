@@ -97,6 +97,35 @@ export class Profile extends HTMLElement {
         // Append sidebarDiv to container
         container.appendChild(sidebarDiv);
 
+        const offlinePongDiv = document.createElement("div");
+        offlinePongDiv.setAttribute("id", "offline-pong");
+
+        const span = document.createElement("span");
+        const icon = document.createElement("i");
+        icon.classList.add("uil", "uil-question-circle");
+        span.appendChild(icon);
+        offlinePongDiv.appendChild(span);
+
+        const contentDiv = document.createElement("div");
+        contentDiv.setAttribute("id", "content");
+
+        const h3 = document.createElement("h3");
+        h3.textContent = "Need Practice?";
+        contentDiv.appendChild(h3);
+
+        const small = document.createElement("small");
+        small.textContent = "Play OFFLINE with friend!";
+        contentDiv.appendChild(small);
+
+        offlinePongDiv.appendChild(contentDiv);
+
+        const btn = document.createElement("button");
+        btn.classList.add("btn");
+        btn.textContent = "Play OFFLINE";
+        offlinePongDiv.appendChild(btn);
+
+        container.appendChild(offlinePongDiv);
+
         // Find existing div to insert container into
         const existingDiv = this.shadow.querySelector('existing-div-selector'); // Replace 'existing-div-selector' with your actual selector
 
