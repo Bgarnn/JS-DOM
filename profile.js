@@ -67,7 +67,7 @@ export class Profile extends HTMLElement {
         sidebarDiv.appendChild(createMenuItem("uil-user", "Account", () => {}));
         sidebarDiv.appendChild(createMenuItem("uil-bell", "Notifications", () => {}));
         sidebarDiv.appendChild(createMenuItem("uil-chart-bar", "Statistic", () => {}));
-        sidebarDiv.appendChild(createMenuItem("uil-file", "Match History", () => {
+        sidebarDiv.appendChild(createMenuItem("uil-file-alt", "Match History", () => {
             const notificationElement = document.querySelector('main-page').shadowRoot.childNodes[0].shadowRoot.querySelector("notifi-cation").shadowRoot;
             const matchHistory = document.createElement("match-history");
             console.log(notificationElement);
@@ -79,9 +79,9 @@ export class Profile extends HTMLElement {
                 notificationElement.appendChild(matchHistory);
             }
         }));
-        sidebarDiv.appendChild(createMenuItem("uil-globe", "Blocked", () => {}));
+        sidebarDiv.appendChild(createMenuItem("uil-envelope-block", "Blocked List", () => {}));
         sidebarDiv.appendChild(createMenuItem("uil-signout", "Log Out", () => {}));
-        
+
         // Create and append CSS link
         const cssIcon = document.createElement("link");
         cssIcon.setAttribute("rel", "stylesheet");
