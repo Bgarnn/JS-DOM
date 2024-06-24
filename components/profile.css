@@ -50,23 +50,69 @@
 }
 
 #side-bar i {
-    font-size: 1.4rem;
-    color: #4FD1C5;
-    margin-left: 0.5rem;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.0rem; /* Adjust the size of the icon container */
-    height: 2.0rem; /* Adjust the size of the icon container */
-    border-radius: 0.75rem; /* Make it circular */
-    background-color: white;
+	font-size: 1.4rem;
+	color: #4FD1C5;
+	margin-left: 0.5rem;
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.0rem; /* Adjust the size of the icon container */
+	height: 2.0rem; /* Adjust the size of the icon container */
+	border-radius: 0.75rem; /* Make it circular */
+	background-color: white;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); /* Adding shadow */
 }
 
 #side-bar .menu-item h3 {
-    margin-left: 0.5rem;
-    font-size: 0.8rem;
+	margin-left: 0.5rem;
+	font-size: 0.8rem;
 	color: #2D3748;
 }
+
+#offline-pong {
+	background-color: #4FD1C5;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 0.75rem;
+	align-items: center;
+}
+
+#offline-pong i {
+	font-size: 1.4rem;
+	background-color: white;
+	color: #4FD1C5;
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.0rem; /* Adjust the size of the icon container */
+	height: 2.0rem; /* Adjust the size of the icon container */
+	border-radius: 0.75rem; /* Make it circular */
+}
+
+#offline-pong #content h3 {
+	color:white;
+	font-size: 0.9rem;
+	margin-top: 0.5rem;
+	margin-bottom: -0.5rem;
+}
+
+#offline-pong #content small {
+	color:white;
+	font-size: 0.7rem;
+}
+
+#offline-pong .btn {
+	margin-top: 0.rem;
+	width: 100%;
+	height: 2rem;
+	text-align: center;
+	border-radius: 0.75rem;
+	padding: 1rem 1;
+	background-color: white;
+	border-color: white;
+	font-size: 0.7rem;
+}
+
 
