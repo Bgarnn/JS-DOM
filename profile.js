@@ -58,7 +58,7 @@ export class Profile extends HTMLElement{
     
       // Create img element for profile photo
       const img = document.createElement("img");
-      img.setAttribute("src", "./images/sam-1.jpg");
+      img.setAttribute("src", "./images/profile-1.jpg");
     
       // Append img to profilePhotoBigDiv
       profilePhotoBigDiv.appendChild(img);

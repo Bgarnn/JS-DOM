@@ -1,5 +1,5 @@
 #container {
-	background: pink;
+	/* background: pink; */
 	padding: 1.5vw 2vw; /* Top/Bottom padding is 1.5, Left/Right padding is 2vw */
   }
   
@@ -18,5 +18,22 @@
 	width: 100%;              /* Make the image fill the width of the container */
 	height: 100%;             /* Make the image fill the height of the container */
 	object-fit: cover;        /* Ensure the image covers the container */
+  }
+
+  #profile-name {
+	padding: 0.5rem;
+	background: white;
+	border-radius: 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); /* Adding shadow */
+  }
+
+  #profile-name h4 {
+	font-size: 1rem;
+	margin-top: 0;
+	margin-bottom: 0;
   }
   
