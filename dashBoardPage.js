@@ -96,17 +96,17 @@ export class DashBoardPage extends HTMLElement{
 	const profileDiv = document.createElement("div");
 	profileDiv.id = "profile";
 
-	// Create div.info for profile info
-	const infoDiv = document.createElement("div");
-	infoDiv.id = "info";
+	// Create div.name for profile name
+	const nameDiv = document.createElement("div");
+	nameDiv.id = "profile-name";
 
 	// Create p element inside infoDiv
-	const infoText = document.createElement("p");
+	const nameText = document.createElement("p");
 	const boldText = document.createElement("b");
 	boldText.textContent = "Prem";
-	infoText.appendChild(boldText);
-	infoDiv.appendChild(infoText);
-	profileDiv.appendChild(infoDiv);
+	nameText.appendChild(boldText);
+	nameDiv.appendChild(nameText);
+	profileDiv.appendChild(nameDiv);
 
 	// Create div#profile-photo for profile photo
 	const profilePhotoDiv = document.createElement("div");
@@ -114,7 +114,7 @@ export class DashBoardPage extends HTMLElement{
 
 	// Create img element for profile photo
 	const profilePhotoImg = document.createElement("img");
-	profilePhotoImg.setAttribute("src", "./images/profile-1.jpg");
+	profilePhotoImg.setAttribute("src", "./images/sam-1.jpg");
 	profilePhotoDiv.appendChild(profilePhotoImg);
 	profileDiv.appendChild(profilePhotoDiv);
 

@@ -1,9 +1,22 @@
-div{
-    background-color: #F8F9FA;
-    margin: 0px;
-    height: 100%;
-}
-
-p{
-    margin: 0px;
-}
+#container {
+	background: pink;
+	padding: 1.5vw 2vw; /* Top/Bottom padding is 1.5, Left/Right padding is 2vw */
+  }
+  
+#profile-photo-big {
+	width: 100%;              /* Make the div fill the width of its container */
+	padding-top: 100%;        /* Set height equal to width, creating a square */
+	position: relative;       /* Set position relative to contain absolutely positioned children */
+	border-radius: 0.75rem; 
+	overflow: hidden;         /* Hide overflow content */
+  }
+  
+  #profile-photo-big img {
+	position: absolute;       /* Position image absolutely */
+	top: 0;                   /* Align image to the top of the container */
+	left: 0;                  /* Align image to the left of the container */
+	width: 100%;              /* Make the image fill the width of the container */
+	height: 100%;             /* Make the image fill the height of the container */
+	object-fit: cover;        /* Ensure the image covers the container */
+  }
+  
