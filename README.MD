@@ -42,7 +42,7 @@ font-size: 0.8rem;
 ```css
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); 
 ```
-- Border-radiue
+- Border-radius
 ```css
 border-radius: 0.75rem;
 ```
