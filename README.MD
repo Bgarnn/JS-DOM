@@ -7,33 +7,24 @@
 
 ## Font
 
-# Font type
+- Font type
 [Poppins on Google Fonts](https://fonts.google.com/specimen/Poppins?query=pop)
 
-# Font color -Default ** NOT BLACK **
+- Font color -Default ** NOT BLACK **
 ```css
 color: #2D3748;
 ```
-# Font Size - Header
+- Font Size - Header
 ```css
 font-size: 0.9rem;
 ```
-# Font Size - Default
+- Font Size - Default
 ```css
 font-size: 0.8rem;
 ```
-# Box-shadow
-```css
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); 
-```
-
-# Border-radiue
-```css
-border-radius: 0.75rem;
-```
 
 ## Styles
-# Button - Sample
+- Button (Sample)
 ```css
 #offline-pong .btn {
 	margin-top: 0rem;
@@ -47,22 +38,35 @@ border-radius: 0.75rem;
 	font-size: 0.7rem;
 }
 ```
+- Box-shadow
+```css
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); 
+```
+- Border-radiue
+```css
+border-radius: 0.75rem;
+```
 
 ## Colors
-# Font (Default) - dark blue
+
+- Font (Default) : dark blue
+```css
 color: #2D3748;
-
-# Background (Default) - light gray
+```
+- Background (Default) : light gray
 background-color: #F8F9FA;
-
-# Background (Text-box) - white
+- Background (Text-box) : white
+```css
 color: white;
-
-# Background (Non-active) - darker-gray
+```
+- Background (Non-active) : darker-gray
+```css
 background-color: #C4C4C4;
-
-# Theme - green
+```
+- Theme : green
+```css
 color: #4FD1C5;
+```
 
 ## Preview
 
