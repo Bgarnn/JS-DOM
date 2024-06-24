@@ -74,79 +74,52 @@ export class DashBoardPage extends HTMLElement{
 		const iconCss = document.createElement("link");
 		iconCss.setAttribute("rel", "stylesheet");
 		iconCss.setAttribute("href", "https://unicons.iconscout.com/release/v4.0.8/css/line.css");
-
-		// Append UniIcons stylesheet to shadow root
 		this.shadow.appendChild(iconCss);
 
-
-
 		// ----------------------------- NAV BAR -----------------------------
-		// Adding container div inside nav-bar
 		const containerDiv = document.createElement("div");
 		containerDiv.id = "container";
 
-		// Adding logo div inside container
 		const logoDiv = document.createElement("div");
 		logoDiv.id = "logo";
-
-		// Create img element for logo
-		const logoImg = document.createElement("img");
-		logoImg.setAttribute("src", "./images/logo.png");
-		logoDiv.appendChild(logoImg);
-
-		// Create h2 element for dashboard text
+		const logoIcon = document.createElement("i");
+		logoIcon.classList.add("uil", "uil-window-grid");
+		logoDiv.appendChild(logoIcon);
 		const dashboardHeading = document.createElement("h2");
 		dashboardHeading.textContent = "DASHBOARD";
 		logoDiv.appendChild(dashboardHeading);
-
-		// Append logoDiv to containerDiv
 		containerDiv.appendChild(logoDiv);
 
-		// Adding profile div inside container
+
 		const profileDiv = document.createElement("div");
 		profileDiv.id = "profile";
-
-		// Create div.name for profile name
 		const nameDiv = document.createElement("div");
 		nameDiv.id = "profile-name";
-
-		// Create p element inside infoDiv
 		const nameText = document.createElement("p");
 		const boldText = document.createElement("b");
 		boldText.textContent = "Prem";
 		nameText.appendChild(boldText);
 		nameDiv.appendChild(nameText);
 		profileDiv.appendChild(nameDiv);
-
-		// Create div#profile-photo for profile photo
 		const profilePhotoDiv = document.createElement("div");
 		profilePhotoDiv.id = "profile-photo";
-
-		// Create img element for profile photo
 		const profilePhotoImg = document.createElement("img");
 		profilePhotoImg.setAttribute("src", "./images/profile-1.jpg");
 		profilePhotoDiv.appendChild(profilePhotoImg);
 		profileDiv.appendChild(profilePhotoDiv);
-
-		// Append profileDiv to containerDiv
 		containerDiv.appendChild(profileDiv);
 
-		// Append containerDiv to navElement (assuming this.navElement exists)
 		this.navElement.appendChild(containerDiv);
-
 		// -----------------------------------------------------------------
-
 
 		const css = document.createElement("link");
 		css.setAttribute("rel","stylesheet");
 		css.setAttribute("href","./components/dashBoardPage.css");
 		
-
 		//append nav-bar
 		this.shadow.appendChild(css);
 		this.shadow.appendChild(this.navElement)
 
-		
 		this.profileElement = document.createElement("pro-file")
 		this.profileElement.setAttribute("id","pro-file");
 

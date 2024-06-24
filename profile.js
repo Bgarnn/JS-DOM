@@ -64,8 +64,9 @@ export class Profile extends HTMLElement {
         };
 
         // Create and append menu items to sidebarDiv
-        sidebarDiv.appendChild(createMenuItem("uil-globe", "RANK 9", () => {}));
-        sidebarDiv.appendChild(createMenuItem("uil-chart-bar", "WIN 2 | LOSE 3", () => {}));
+        sidebarDiv.appendChild(createMenuItem("uil-user", "Account", () => {}));
+        sidebarDiv.appendChild(createMenuItem("uil-bell", "Notifications", () => {}));
+        sidebarDiv.appendChild(createMenuItem("uil-chart-bar", "Statistic", () => {}));
         sidebarDiv.appendChild(createMenuItem("uil-file", "Match History", () => {
             const notificationElement = document.querySelector('main-page').shadowRoot.childNodes[0].shadowRoot.querySelector("notifi-cation").shadowRoot;
             const matchHistory = document.createElement("match-history");
@@ -78,18 +79,9 @@ export class Profile extends HTMLElement {
                 notificationElement.appendChild(matchHistory);
             }
         }));
-        sidebarDiv.appendChild(createMenuItem("uil-user", "Account", () => {}));
-
-        // Create the "Notifications" menu item with notification count
-        const notificationsItem = createMenuItem("uil-bell", "Notifications", () => {}, "notifications");
-        const notificationCount = document.createElement("small");
-        notificationCount.classList.add("notification-count");
-        notificationCount.textContent = "new";
-        notificationsItem.querySelector("i").appendChild(notificationCount);
-        sidebarDiv.appendChild(notificationsItem);
-
+        sidebarDiv.appendChild(createMenuItem("uil-globe", "Blocked", () => {}));
         sidebarDiv.appendChild(createMenuItem("uil-signout", "Log Out", () => {}));
-
+        
         // Create and append CSS link
         const cssIcon = document.createElement("link");
         cssIcon.setAttribute("rel", "stylesheet");

@@ -1,26 +1,26 @@
 #container {
 	/* background: pink; */
 	padding: 1.5vw 2vw; /* Top/Bottom padding is 1.5, Left/Right padding is 2vw */
-  }
-  
+}
+
 #profile-photo-big {
 	width: 100%;              /* Make the div fill the width of its container */
 	padding-top: 100%;        /* Set height equal to width, creating a square */
 	position: relative;       /* Set position relative to contain absolutely positioned children */
 	border-radius: 0.75rem; 
 	overflow: hidden;         /* Hide overflow content */
-  }
-  
-  #profile-photo-big img {
+}
+
+#profile-photo-big img {
 	position: absolute;       /* Position image absolutely */
 	top: 0;                   /* Align image to the top of the container */
 	left: 0;                  /* Align image to the left of the container */
 	width: 100%;              /* Make the image fill the width of the container */
 	height: 100%;             /* Make the image fill the height of the container */
 	object-fit: cover;        /* Ensure the image covers the container */
-  }
+}
 
-  #profile-name {
+#profile-name {
 	padding: 0.5rem;
 	background: white;
 	border-radius: 0.75rem;
@@ -29,11 +29,44 @@
 	justify-content: center;
 	margin-top: 1rem;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); /* Adding shadow */
-  }
+}
 
-  #profile-name h4 {
+#profile-name h4 {
 	font-size: 1rem;
 	margin-top: 0;
 	margin-bottom: 0;
-  }
-  
+	color: #2D3748;
+}
+
+#side-bar {
+	margin-top: 1rem;
+}
+
+#side-bar .menu-item {
+	display: flex;
+	align-items: center;
+	height: 2.5rem;
+	cursor: pointer;
+}
+
+#side-bar i {
+    font-size: 1.4rem;
+    color: #4FD1C5;
+    margin-left: 0.5rem;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.0rem; /* Adjust the size of the icon container */
+    height: 2.0rem; /* Adjust the size of the icon container */
+    border-radius: 0.75rem; /* Make it circular */
+    background-color: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); /* Adding shadow */
+}
+
+#side-bar .menu-item h3 {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+	color: #2D3748;
+}
+
