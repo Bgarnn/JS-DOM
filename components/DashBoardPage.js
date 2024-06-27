@@ -1,72 +1,14 @@
-import {} from "./friends.js"
-import {} from "./tournament.js"
-import { isTag} from "./profile.js"
-export class Notification extends HTMLElement{
-	constructor(){
-		super();
-	}
 
-	connectedCallback(){
-		this.shadow = this.attachShadow({ mode: "open" });
-		this.textElement = document.createElement("div");
-		// this.textElement.textContent = "notification";
-
-		const css = document.createElement("link");
-		css.setAttribute("rel","stylesheet");
-		css.setAttribute("href","./components/notification.css");
-
-		this.shadow.appendChild(css);
-		this.shadow.appendChild(this.textElement)
-	}
-}
-
-export function changeNotification(element){
-	const notificationElement = document.querySelector('main-page').shadowRoot.childNodes[0].shadowRoot.querySelector("notifi-cation").shadowRoot;
-	// console.log(notificationElement.childNodes);
-	if(notificationElement.childNodes.length == 3)
-	{
-		const nodeRemove = notificationElement.childNodes[2]
-		notificationElement.removeChild(nodeRemove)
-	}
-	const matchHistory = document.createElement(element)
-	if(!isTag(notificationElement.lastChild, element))
-		notificationElement.appendChild(matchHistory);
-}
-
-
-customElements.define("notifi-cation", Notification);
-export class MatchHistory extends HTMLElement{
-	constructor(){
-		super();
-	}
-
-	connectedCallback(){
-		this.shadow = this.attachShadow({ mode: "open" });
-		this.textElement = document.createElement("div");
-		this.textElement.textContent = "match history Element";
-
-		const css = document.createElement("link");
-		css.setAttribute("rel","stylesheet");
-		css.setAttribute("href","./components/matchHistory.css");
-
-		this.shadow.appendChild(css);
-		this.shadow.appendChild(this.textElement)
-	}
-
-	disconnectedCallback(){
-		console.log("delete match history components")
-	}
-}
-
-
+// import styles from "../components/dashBoardPage.css " assert { type: "css" }
+import {} from "../index.js"
 export class DashBoardPage extends HTMLElement{
 	constructor(){
 		super();
+		this.attachShadow({ mode: "open" });
 	}
 
 	connectedCallback(){
-		this.shadow = this.attachShadow({ mode: "open" });
-		this.navElement = document.createElement("div");
+	  this.navElement = document.createElement("div");
 		// this.navElement.textContent = "nav bar";
 		this.navElement.setAttribute("id", "nav-bar");
 
@@ -74,7 +16,7 @@ export class DashBoardPage extends HTMLElement{
 		const iconCss = document.createElement("link");
 		iconCss.setAttribute("rel", "stylesheet");
 		iconCss.setAttribute("href", "https://unicons.iconscout.com/release/v4.0.8/css/line.css");
-		this.shadow.appendChild(iconCss);
+		this.shadowRoot.appendChild(iconCss);
 
 		// ----------------------------- NAV BAR -----------------------------
 		const containerDiv = document.createElement("div");
@@ -104,7 +46,7 @@ export class DashBoardPage extends HTMLElement{
 		const profilePhotoDiv = document.createElement("div");
 		profilePhotoDiv.id = "profile-photo";
 		const profilePhotoImg = document.createElement("img");
-		profilePhotoImg.setAttribute("src", "./images/profile-1.jpg");
+		profilePhotoImg.setAttribute("src", "../images/profile-1.jpg");
 		profilePhotoDiv.appendChild(profilePhotoImg);
 		profileDiv.appendChild(profilePhotoDiv);
 		containerDiv.appendChild(profileDiv);
@@ -114,11 +56,10 @@ export class DashBoardPage extends HTMLElement{
 
 		const css = document.createElement("link");
 		css.setAttribute("rel","stylesheet");
-		css.setAttribute("href","./components/dashBoardPage.css");
-		
+		css.setAttribute("href","./components/DashBoardPage.css");
 		//append nav-bar
-		this.shadow.appendChild(css);
-		this.shadow.appendChild(this.navElement)
+		this.shadowRoot.appendChild(css);
+		this.shadowRoot.appendChild(this.navElement)
 
 		this.profileElement = document.createElement("pro-file")
 		this.profileElement.setAttribute("id","pro-file");
@@ -144,7 +85,7 @@ export class DashBoardPage extends HTMLElement{
 		divContent.appendChild(divRight)
 
 		console.log(divContent);
-		this.shadow.appendChild(divContent)
+		this.shadowRoot.appendChild(divContent)
 
 		const divFooter = document.createElement("div");
 		divFooter.setAttribute("id", "footer");
@@ -160,7 +101,7 @@ export class DashBoardPage extends HTMLElement{
 		babyCadetSpan.textContent = "42 Baby Cadet";	
 		gameElement.appendChild(babyCadetSpan);
 		divFooter.appendChild(gameElement);
-		this.shadow.appendChild(divFooter);
+		this.shadowRoot.appendChild(divFooter);
 		
 		// this.shadow.appendChild(this.profileElement)
 		// this.shadow.appendChild(this.notificationElement)
@@ -172,7 +113,3 @@ export class DashBoardPage extends HTMLElement{
 		// this.shadow.appendChild(this.buttonElement)
 	}
 }
-
-customElements.define("dashboard-page", DashBoardPage);
-customElements.define("match-history", MatchHistory);
-

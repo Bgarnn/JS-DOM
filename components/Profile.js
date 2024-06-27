@@ -1,14 +1,5 @@
-import {} from "./dashBoardPage.js";
+import { isTag } from "./Utils.js";
 
-export function isTag(node, tagName) {
-    // Ensure we're dealing with an element node
-    if (node.nodeType !== Node.ELEMENT_NODE) {
-        return false;
-    }
-
-    // Compare tag names ignoring case (HTML tags are not case-sensitive)
-    return node.tagName.toLowerCase() === tagName.toLowerCase();
-}
 
 export class Profile extends HTMLElement {
     constructor() {
@@ -141,4 +132,4 @@ export class Profile extends HTMLElement {
     }
 }
 
-customElements.define("pro-file", Profile);
+
