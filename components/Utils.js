@@ -1,12 +1,12 @@
 
 export function isTag(node, tagName) {
-    // Ensure we're dealing with an element node
-    if (node.nodeType !== Node.ELEMENT_NODE) {
-        return false;
-    }
+	// Ensure we're dealing with an element node
+	if (node.nodeType !== Node.ELEMENT_NODE) {
+		return false;
+	}
 
-    // Compare tag names ignoring case (HTML tags are not case-sensitive)
-    return node.tagName.toLowerCase() === tagName.toLowerCase();
+	// Compare tag names ignoring case (HTML tags are not case-sensitive)
+	return node.tagName.toLowerCase() === tagName.toLowerCase();
 }
 
 
