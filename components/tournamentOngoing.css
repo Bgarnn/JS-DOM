@@ -1,12 +1,9 @@
 #tour-ongoing {
-    margin-top: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: -1.5rem;
+    height: 14vh; /* Set the height to 14vh */
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 0.75rem;
-    padding: 1.5rem;
     background-color: #C4C4C4;
 }
 
