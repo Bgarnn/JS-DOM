@@ -1,5 +1,3 @@
-
-
 export class MainPage extends HTMLElement{
 	constructor(){
 		super();

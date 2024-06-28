@@ -1,3 +1,39 @@
+import { navigateToForMainPage } from "../index.js";
+
+export class FirstPage extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
+
+	template = () => {
+		return `
+			<link rel="stylesheet" href="./components/firstPage.css">
+			
+			<div id="firstPage">
+				<p>First Page</p>
+				<button id="loginButton">Login</button>
+			</div>
+			
+			<div id="gameTag">
+				<p>Game</p>
+			</div>
+			
+			<div id="footer">
+				<p>Footer</p>
+			</div>
+		`;
+	}
+
+	connectedCallback() {
+		this.shadowRoot.innerHTML = this.template();
+
+		this.shadowRoot.querySelector('#loginButton').addEventListener('click', () => {
+			navigateToForMainPage("/dashboard-page");
+		});
+	}
+}
+
 // import {navigateToForMainPage} from "../index.js"
 
 // export class FirstPage extends HTMLElement{
@@ -45,40 +81,3 @@
 //         this.shadow.appendChild(divFooter)
 //     }
 // }
-
-import { navigateToForMainPage } from "../index.js";
-
-export class FirstPage extends HTMLElement {
-	constructor() {
-		super();
-		this.attachShadow({ mode: "open" });
-	}
-
-	template = () => {
-		return `
-			<link rel="stylesheet" href="./components/firstPage.css">
-			
-			<div id="firstPage">
-				<p>First Page</p>
-				<button id="loginButton">Login</button>
-			</div>
-			
-			<div id="gameTag">
-				<p>Game</p>
-			</div>
-			
-			<div id="footer">
-				<p>Footer</p>
-			</div>
-		`;
-	}
-
-	connectedCallback() {
-		this.shadowRoot.innerHTML = this.template();
-
-		this.shadowRoot.querySelector('#loginButton').addEventListener('click', () => {
-			navigateToForMainPage("/dashboard-page");
-		});
-	}
-}
-

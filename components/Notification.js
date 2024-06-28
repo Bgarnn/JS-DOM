@@ -1,4 +1,3 @@
-
 export class Notification extends HTMLElement{
 	constructor(){
 		super();

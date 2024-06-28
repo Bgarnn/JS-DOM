@@ -1,3 +1,79 @@
+import { isTag } from "./Utils.js";
+
+export class Profile extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
+
+	template = () => {
+		return `
+			<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+			<link rel="stylesheet" href="./components/profile.css">
+			
+			<div id="container">
+				<div id="profile-photo-big">
+					<img src="./images/profile-1.jpg" alt="Profile Photo">
+				</div>
+				<a id="profile-name">
+					<h4>Prem</h4>
+				</a>
+				<div id="side-bar">
+					<a class="menu-item">
+						<span><i class="uil uil-user"></i></span>
+						<h3>Account</h3>
+					</a>
+					<a class="menu-item">
+						<span><i class="uil uil-bell"></i></span>
+						<h3>Notifications</h3>
+					</a>
+					<a class="menu-item">
+						<span><i class="uil uil-chart-bar"></i></span>
+						<h3>Statistic</h3>
+					</a>
+					<a class="menu-item" id="match-history-menu">
+						<span><i class="uil uil-file-alt"></i></span>
+						<h3>Match History</h3>
+					</a>
+					<a class="menu-item">
+						<span><i class="uil uil-envelope-block"></i></span>
+						<h3>Blocked List</h3>
+					</a>
+					<a class="menu-item">
+						<span><i class="uil uil-signout"></i></span>
+						<h3>Log Out</h3>
+					</a>
+				</div>
+				<div id="offline-pong">
+					<span><i class="uil uil-question-circle"></i></span>
+					<div id="content">
+						<h3>Need Practice?</h3>
+						<small>Play OFFLINE with friend!</small>
+					</div>
+					<button class="btn">Play OFFLINE</button>
+				</div>
+			</div>
+		`;
+	}
+
+	connectedCallback() {
+		this.shadowRoot.innerHTML = this.template();
+
+		this.shadowRoot.querySelector('#match-history-menu').addEventListener('click', () => {
+			const notificationElement = document.querySelector('main-page').shadowRoot.childNodes[0].shadowRoot.querySelector("notifi-cation").shadowRoot;
+			const matchHistory = document.createElement("match-history");
+			console.log(notificationElement);
+			if (notificationElement.childNodes.length == 3) {
+				const nodeRemove = notificationElement.childNodes[2];
+				notificationElement.removeChild(nodeRemove);
+			}
+			if (!isTag(notificationElement.lastChild, "match-history")) {
+				notificationElement.appendChild(matchHistory);
+			}
+		});
+	}
+}
+
 // import { isTag } from "./Utils.js";
 
 
@@ -131,79 +207,3 @@
 //         }
 //     }
 // }
-
-import { isTag } from "./Utils.js";
-
-export class Profile extends HTMLElement {
-	constructor() {
-		super();
-		this.attachShadow({ mode: "open" });
-	}
-
-	template = () => {
-		return `
-			<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-			<link rel="stylesheet" href="./components/profile.css">
-			
-			<div id="container">
-				<div id="profile-photo-big">
-					<img src="./images/profile-1.jpg" alt="Profile Photo">
-				</div>
-				<a id="profile-name">
-					<h4>Prem</h4>
-				</a>
-				<div id="side-bar">
-					<a class="menu-item">
-						<span><i class="uil uil-user"></i></span>
-						<h3>Account</h3>
-					</a>
-					<a class="menu-item">
-						<span><i class="uil uil-bell"></i></span>
-						<h3>Notifications</h3>
-					</a>
-					<a class="menu-item">
-						<span><i class="uil uil-chart-bar"></i></span>
-						<h3>Statistic</h3>
-					</a>
-					<a class="menu-item" id="match-history-menu">
-						<span><i class="uil uil-file-alt"></i></span>
-						<h3>Match History</h3>
-					</a>
-					<a class="menu-item">
-						<span><i class="uil uil-envelope-block"></i></span>
-						<h3>Blocked List</h3>
-					</a>
-					<a class="menu-item">
-						<span><i class="uil uil-signout"></i></span>
-						<h3>Log Out</h3>
-					</a>
-				</div>
-				<div id="offline-pong">
-					<span><i class="uil uil-question-circle"></i></span>
-					<div id="content">
-						<h3>Need Practice?</h3>
-						<small>Play OFFLINE with friend!</small>
-					</div>
-					<button class="btn">Play OFFLINE</button>
-				</div>
-			</div>
-		`;
-	}
-
-	connectedCallback() {
-		this.shadowRoot.innerHTML = this.template();
-
-		this.shadowRoot.querySelector('#match-history-menu').addEventListener('click', () => {
-			const notificationElement = document.querySelector('main-page').shadowRoot.childNodes[0].shadowRoot.querySelector("notifi-cation").shadowRoot;
-			const matchHistory = document.createElement("match-history");
-			console.log(notificationElement);
-			if (notificationElement.childNodes.length == 3) {
-				const nodeRemove = notificationElement.childNodes[2];
-				notificationElement.removeChild(nodeRemove);
-			}
-			if (!isTag(notificationElement.lastChild, "match-history")) {
-				notificationElement.appendChild(matchHistory);
-			}
-		});
-	}
-}

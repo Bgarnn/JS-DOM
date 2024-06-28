@@ -1,3 +1,25 @@
+export class Tournament extends HTMLElement {
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
+	
+	template = () => {
+		return `
+			<link rel="stylesheet" href="./components/tournament.css">
+			<div>
+				<tournament-upcoming></tournament-upcoming>
+				<!-- Uncomment the button element as needed -->
+				<!-- <button id="joinButton">JOIN TOURNAMENT</button> -->
+			</div>
+		`;
+	}
+
+	connectedCallback() {
+		this.shadowRoot.innerHTML = this.template();
+	}
+}
+
 // // export class Tournament extends HTMLElement{
 //     constructor(){
 //         super();
@@ -26,25 +48,3 @@
 //         this.shadow.appendChild(div)
 //     }
 // }
-
-export class Tournament extends HTMLElement {
-	constructor() {
-		super();
-		this.attachShadow({ mode: "open" });
-	}
-	
-	template = () => {
-		return `
-			<link rel="stylesheet" href="./components/tournament.css">
-			<div>
-				<tournament-upcoming></tournament-upcoming>
-				<!-- Uncomment the button element as needed -->
-				<!-- <button id="joinButton">JOIN TOURNAMENT</button> -->
-			</div>
-		`;
-	}
-
-	connectedCallback() {
-		this.shadowRoot.innerHTML = this.template();
-	}
-}
