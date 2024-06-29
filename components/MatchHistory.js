@@ -1,26 +1,27 @@
 export class MatchHistory extends HTMLElement {
-	constructor() {
-		super();
-		this.attachShadow({ mode: "open" });
-	}
+  constructor() {
+    console.log("Match");
+    super();
+    this.attachShadow({ mode: "open" });
+  }
 
-	template = () => {
-		return `
+  template = () => {
+    return `
 			<link rel="stylesheet" href="./components/matchHistory.css">
 			
 			<div id="matchHistory">
 				match history Element
 			</div>
 		`;
-	}
+  };
 
-	connectedCallback() {
-		this.shadowRoot.innerHTML = this.template();
-	}
+  connectedCallback() {
+    this.shadowRoot.innerHTML = this.template();
+  }
 
-	disconnectedCallback() {
-		console.log("delete match history components");
-	}
+  disconnectedCallback() {
+    console.log("delete match history components");
+  }
 }
 
 // // export class MatchHistory extends HTMLElement{
@@ -45,4 +46,3 @@ export class MatchHistory extends HTMLElement {
 //         console.log("delete match history components")
 //     }
 // }
-

@@ -1,13 +1,13 @@
 import { isTag } from "./Utils.js";
 
 export class Profile extends HTMLElement {
-	constructor() {
-		super();
-		this.attachShadow({ mode: "open" });
-	}
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
 
-	template = () => {
-		return `
+  template = () => {
+    return `
 			<link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 			<link rel="stylesheet" href="./components/profile.css">
 			
@@ -21,15 +21,15 @@ export class Profile extends HTMLElement {
 				<div id="side-bar">
 					<a class="menu-item">
 						<span><i class="uil uil-user"></i></span>
-						<h3>Account</h3>
+						<h3 id="account">Account</h3>
 					</a>
 					<a class="menu-item">
 						<span><i class="uil uil-bell"></i></span>
-						<h3>Notifications</h3>
+						<h3 id="friendsRequest">Notifications</h3>
 					</a>
 					<a class="menu-item">
 						<span><i class="uil uil-chart-bar"></i></span>
-						<h3>Statistic</h3>
+						<h3 id="statistic">Statistic</h3>
 					</a>
 					<a class="menu-item" id="match-history-menu">
 						<span><i class="uil uil-file-alt"></i></span>
@@ -37,7 +37,7 @@ export class Profile extends HTMLElement {
 					</a>
 					<a class="menu-item">
 						<span><i class="uil uil-envelope-block"></i></span>
-						<h3>Blocked List</h3>
+						<h3 id="blockedList">Blocked List</h3>
 					</a>
 					<a class="menu-item">
 						<span><i class="uil uil-signout"></i></span>
@@ -54,28 +54,109 @@ export class Profile extends HTMLElement {
 				</div>
 			</div>
 		`;
-	}
+  };
 
-	connectedCallback() {
-		this.shadowRoot.innerHTML = this.template();
+  connectedCallback() {
+    this.shadowRoot.innerHTML = this.template();
 
-		this.shadowRoot.querySelector('#match-history-menu').addEventListener('click', () => {
-			const notificationElement = document.querySelector('main-page').shadowRoot.childNodes[0].shadowRoot.querySelector("notifi-cation").shadowRoot;
-			const matchHistory = document.createElement("match-history");
-			console.log(notificationElement);
-			if (notificationElement.childNodes.length == 3) {
-				const nodeRemove = notificationElement.childNodes[2];
-				notificationElement.removeChild(nodeRemove);
-			}
-			if (!isTag(notificationElement.lastChild, "match-history")) {
-				notificationElement.appendChild(matchHistory);
-			}
-		});
-	}
+    this.shadowRoot
+      .querySelector("#match-history-menu")
+      .addEventListener("click", () => {
+        const notificationElement = document
+          .querySelector("main-page")
+          .shadowRoot.childNodes[0].shadowRoot.querySelector(
+            "notifi-cation"
+          ).shadowRoot;
+        const matchHistory = document.createElement("match-history");
+        console.log(notificationElement);
+        if (notificationElement.childNodes.length == 3) {
+          const nodeRemove = notificationElement.childNodes[2];
+          notificationElement.removeChild(nodeRemove);
+        }
+        if (!isTag(notificationElement.lastChild, "match-history")) {
+          notificationElement.appendChild(matchHistory);
+        }
+      });
+
+    // console.log(this.shadowRoot.childNodes);
+    this.shadowRoot.querySelector("#account").addEventListener("click", () => {
+      const notificationElement = document
+        .querySelector("main-page")
+        .shadowRoot.childNodes[0].shadowRoot.querySelector(
+          "notifi-cation"
+        ).shadowRoot;
+      //   console.log(notificationElement);
+      const accountManagmentElement =
+        document.createElement("account-managment");
+      // console.log(notificationElement);
+      if (notificationElement.childNodes.length == 3) {
+        const nodeRemove = notificationElement.childNodes[2];
+        notificationElement.removeChild(nodeRemove);
+      }
+      if (!isTag(notificationElement.lastChild, "account-managment")) {
+        console.log(accountManagmentElement);
+        notificationElement.appendChild(accountManagmentElement);
+        console.log(notificationElement);
+      }
+    });
+
+    this.shadowRoot
+      .querySelector("#friendsRequest")
+      .addEventListener("click", () => {
+        const notificationElement = document
+          .querySelector("main-page")
+          .shadowRoot.childNodes[0].shadowRoot.querySelector(
+            "notifi-cation"
+          ).shadowRoot;
+        const friendsRequestElement = document.createElement("friends-request");
+        if (notificationElement.childNodes.length == 3) {
+          const nodeRemove = notificationElement.childNodes[2];
+          notificationElement.removeChild(nodeRemove);
+        }
+        if (!isTag(notificationElement.lastChild, "friends-request")) {
+          notificationElement.appendChild(friendsRequestElement);
+        }
+      });
+
+    this.shadowRoot
+      .querySelector("#statistic")
+      .addEventListener("click", () => {
+        const notificationElement = document
+          .querySelector("main-page")
+          .shadowRoot.childNodes[0].shadowRoot.querySelector(
+            "notifi-cation"
+          ).shadowRoot;
+        const friendsRequestElement = document.createElement("statis-tic");
+        if (notificationElement.childNodes.length == 3) {
+          const nodeRemove = notificationElement.childNodes[2];
+          notificationElement.removeChild(nodeRemove);
+        }
+        if (!isTag(notificationElement.lastChild, "statis-tic")) {
+          notificationElement.appendChild(friendsRequestElement);
+        }
+      });
+
+    this.shadowRoot
+      .querySelector("#blockedList")
+      .addEventListener("click", () => {
+        const notificationElement = document
+          .querySelector("main-page")
+          .shadowRoot.childNodes[0].shadowRoot.querySelector(
+            "notifi-cation"
+          ).shadowRoot;
+        const friendsRequestElement = document.createElement("block-list");
+        if (notificationElement.childNodes.length == 3) {
+          const nodeRemove = notificationElement.childNodes[2];
+          notificationElement.removeChild(nodeRemove);
+        }
+        if (!isTag(notificationElement.lastChild, "block-list")) {
+          notificationElement.appendChild(friendsRequestElement);
+        }
+      });
+  }
 }
 
 // import { isTag } from "./Utils.js";
-
 
 // export class Profile extends HTMLElement {
 //     constructor() {
