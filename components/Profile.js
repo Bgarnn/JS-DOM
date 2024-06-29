@@ -67,37 +67,16 @@ export class Profile extends HTMLElement {
           .shadowRoot.childNodes[0].shadowRoot.querySelector(
             "notifi-cation"
           ).shadowRoot;
-        const matchHistory = document.createElement("match-history");
-        console.log(notificationElement);
-        if (notificationElement.childNodes.length == 3) {
-          const nodeRemove = notificationElement.childNodes[2];
-          notificationElement.removeChild(nodeRemove);
-        }
-        if (!isTag(notificationElement.lastChild, "match-history")) {
-          notificationElement.appendChild(matchHistory);
-        }
+        addElementInNoti(notificationElement, "match-history");
       });
 
-    // console.log(this.shadowRoot.childNodes);
     this.shadowRoot.querySelector("#account").addEventListener("click", () => {
       const notificationElement = document
         .querySelector("main-page")
         .shadowRoot.childNodes[0].shadowRoot.querySelector(
           "notifi-cation"
         ).shadowRoot;
-      //   console.log(notificationElement);
-      const accountManagmentElement =
-        document.createElement("account-managment");
-      // console.log(notificationElement);
-      if (notificationElement.childNodes.length == 3) {
-        const nodeRemove = notificationElement.childNodes[2];
-        notificationElement.removeChild(nodeRemove);
-      }
-      if (!isTag(notificationElement.lastChild, "account-managment")) {
-        console.log(accountManagmentElement);
-        notificationElement.appendChild(accountManagmentElement);
-        console.log(notificationElement);
-      }
+      addElementInNoti(notificationElement, "account-managment");
     });
 
     this.shadowRoot
@@ -108,14 +87,7 @@ export class Profile extends HTMLElement {
           .shadowRoot.childNodes[0].shadowRoot.querySelector(
             "notifi-cation"
           ).shadowRoot;
-        const friendsRequestElement = document.createElement("friends-request");
-        if (notificationElement.childNodes.length == 3) {
-          const nodeRemove = notificationElement.childNodes[2];
-          notificationElement.removeChild(nodeRemove);
-        }
-        if (!isTag(notificationElement.lastChild, "friends-request")) {
-          notificationElement.appendChild(friendsRequestElement);
-        }
+        addElementInNoti(notificationElement, "friends-request");
       });
 
     this.shadowRoot
@@ -126,14 +98,7 @@ export class Profile extends HTMLElement {
           .shadowRoot.childNodes[0].shadowRoot.querySelector(
             "notifi-cation"
           ).shadowRoot;
-        const friendsRequestElement = document.createElement("statis-tic");
-        if (notificationElement.childNodes.length == 3) {
-          const nodeRemove = notificationElement.childNodes[2];
-          notificationElement.removeChild(nodeRemove);
-        }
-        if (!isTag(notificationElement.lastChild, "statis-tic")) {
-          notificationElement.appendChild(friendsRequestElement);
-        }
+        addElementInNoti(notificationElement, "statis-tic");
       });
 
     this.shadowRoot
@@ -144,15 +109,19 @@ export class Profile extends HTMLElement {
           .shadowRoot.childNodes[0].shadowRoot.querySelector(
             "notifi-cation"
           ).shadowRoot;
-        const friendsRequestElement = document.createElement("block-list");
-        if (notificationElement.childNodes.length == 3) {
-          const nodeRemove = notificationElement.childNodes[2];
-          notificationElement.removeChild(nodeRemove);
-        }
-        if (!isTag(notificationElement.lastChild, "block-list")) {
-          notificationElement.appendChild(friendsRequestElement);
-        }
+        addElementInNoti(notificationElement, "block-list");
       });
+  }
+}
+
+function addElementInNoti(notiElement, nameElement) {
+  const addElement = document.createElement(nameElement);
+  if (notiElement.childNodes.length == 3) {
+    const nodeRemove = notiElement.childNodes[2];
+    notiElement.removeChild(nodeRemove);
+  }
+  if (!isTag(notiElement.lastChild, nameElement)) {
+    notiElement.appendChild(addElement);
   }
 }
 
