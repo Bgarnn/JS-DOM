@@ -1,21 +1,21 @@
 export class Statistic extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-  }
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
 
-  template = () => {
-    return `
+	template = () => {
+		return `
 			<link rel="stylesheet" href="./components/Statistic.css">
 			<div>Statistic</div>
 		`;
-  };
+	};
 
-  connectedCallback() {
-    this.shadowRoot.innerHTML = this.template();
-  }
+	connectedCallback() {
+		this.shadowRoot.innerHTML = this.template();
+	}
 
-  disconnectedCallback() {
-    // console.log("delete")
-  }
+	disconnectedCallback() {
+		// console.log("delete")
+	}
 }

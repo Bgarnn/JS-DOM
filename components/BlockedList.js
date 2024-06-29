@@ -1,24 +1,24 @@
 export class BlockedList extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-  }
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
 
-  template = () => {
-    return `
+	template = () => {
+		return `
 			<link rel="stylesheet" href="./components/BlockedList.css">
 			
 			<div id="BlockedList">
 				BlockedList
 			</div>
 		`;
-  };
+	};
 
-  connectedCallback() {
-    this.shadowRoot.innerHTML = this.template();
-  }
+	connectedCallback() {
+		this.shadowRoot.innerHTML = this.template();
+	}
 
-  disconnectedCallback() {
-    console.log("delete match history components");
-  }
+	disconnectedCallback() {
+		console.log("delete match history components");
+	}
 }

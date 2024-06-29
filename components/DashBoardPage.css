@@ -113,19 +113,19 @@ b {
 }
 
 #nav-bar #logo i {
-    font-size: 2rem; /* Adjust size as needed */
-    color: #2D3748; /* Adjust color */
+	font-size: 2rem; /* Adjust size as needed */
+	color: #2D3748; /* Adjust color */
 }
 
 #nav-bar #logo div {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
+	display: flex; /* Use flexbox for layout */
+	align-items: center; /* Center items vertically */
 }
 
 #nav-bar #logo h2 {
-    margin: 0; /* Reset margin */
-    font-size: 1rem; /* Example font size */
-    color: #2D3748; /* Example text color */
+	margin: 0; /* Reset margin */
+	font-size: 1rem; /* Example font size */
+	color: #2D3748; /* Example text color */
 }
 
 #nav-bar #profile {
