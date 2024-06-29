@@ -1,32 +1,50 @@
-#firstPage{
+#nav {
 	width: 100%;
-	height: 10vh;
+	height: 4rem;
 	background-color: aquamarine;
 }
 
-#firstPage p{
-	margin: 0px
+#nav p {
+	margin: 0;
 }
-#gameTag{
+
+#gameTag {
 	width: 100%;
-	height: 85vh;
+	height: 48rem;
 	margin-bottom: 0;
 	background-color: rgb(255, 210, 127);
 }
 
 #gameTag p {
-	margin: 0px;
-}
-
-#footer{
-	width: 100%;
-	height: 5vh;
-	background-color: rgb(127, 255, 159);
-}
-
-#footer p{
-	margin: 0px;
-}
-body{
 	margin: 0;
+}
+
+#footer {
+	width: 100%;
+	height: 2rem;
+	background-color: rgb(127, 255, 159);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+#footer p {
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+#gameTag {
+	flex: 1; /* Make #gameTag take up remaining vertical space */
+}
+
+@media screen and (max-height: 48rem) {
+	#footer {
+		display: none;
+	}
 }

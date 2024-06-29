@@ -1,7 +1,6 @@
 div{
 	margin-top: 2vh;
-	margin-right: 2vw;
-	height: 68vh;
+	height: 70vh;
+	min-height: 38rem;
 	background-color: red;
-
 }

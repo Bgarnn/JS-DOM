@@ -1,6 +1,6 @@
 div{
+	height: 47vh;
+	min-height: 25rem;
 	margin-top: 2vh;
-	margin-right: 2vw;
-	height: 45vh;
 	background-color: rgb(162, 79, 240);
 }

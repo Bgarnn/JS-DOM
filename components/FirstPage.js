@@ -10,7 +10,7 @@ export class FirstPage extends HTMLElement {
 		return `
 			<link rel="stylesheet" href="./components/firstPage.css">
 			
-			<div id="firstPage">
+			<div id="nav">
 				<p>First Page</p>
 				<button id="loginButton">Login</button>
 			</div>

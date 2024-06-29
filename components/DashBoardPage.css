@@ -13,12 +13,14 @@
 
 html {
 	font-size: 14px;
+	height: 100%;
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
-	font-family: poppins, sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: 'Poppins', sans-serif;
 	font-size: 0.88rem;
 	background: #F8F9FA;
 	user-select: none;
@@ -66,7 +68,6 @@ small {
 	color: #2D3748;
 }
 
-
 p {
 	color: #2D3748;
 }
@@ -76,16 +77,15 @@ b {
 }
 
 /* ========================================== NAV-BAR ========================================== */
-#nav-bar{
+#nav-bar {
 	height: 8vh;
+	min-height: 4rem;
 	background-color: #F8F9FA;
 	width: 100%;
 	padding: 0.7rem 0;
-	position: fixed;
 	top: 0;
 	z-index: 1;
-	position: relative; /* Make sure nav is relative to position the pseudo-element correctly */
-	
+	position: relative;
 }
 
 #nav-bar::after {
@@ -94,8 +94,8 @@ b {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 4px; /* Adjust the height as needed */
-	background: linear-gradient(to right, #F8F9FA, #D8DBDD, #F8F9FA); /* Gradient colors */
+	height: 4px;
+	background: linear-gradient(to right, #F8F9FA, #D8DBDD, #F8F9FA); 
 }
 
 #nav-bar #container {
@@ -113,19 +113,19 @@ b {
 }
 
 #nav-bar #logo i {
-	font-size: 2rem; /* Adjust size as needed */
-	color: #2D3748; /* Adjust color */
+	font-size: 2rem;
+	color: #2D3748;
 }
 
 #nav-bar #logo div {
-	display: flex; /* Use flexbox for layout */
-	align-items: center; /* Center items vertically */
+	display: flex;
+	align-items: center;
 }
 
 #nav-bar #logo h2 {
-	margin: 0; /* Reset margin */
-	font-size: 1rem; /* Example font size */
-	color: #2D3748; /* Example text color */
+	margin: 0; 
+	font-size: 1rem; 
+	color: #2D3748; 
 }
 
 #nav-bar #profile {
@@ -138,56 +138,59 @@ b {
 	width: 2.8rem;
 	height: 2.8rem;
 	border-radius: 0.75rem;
-	overflow: hidden; /* Hide overflow content */
-	position: relative; /* Position relative to contain absolutely positioned img */
-  }
-  
-  #nav-bar #profile #profile-photo img {
+	overflow: hidden; 
+	position: relative; 
+}
+
+#nav-bar #profile #profile-photo img {
 	display: block; /* Remove default inline spacing */
-	width: 100%; /* Fill the width of the container */
-	height: 100%; /* Fill the height of the container */
+	width: 100%; 
+	height: 100%; 
 	object-fit: cover; /* Ensure the image covers the container */
 	object-position: center; /* Center the image */
-  }
+}
 /* ============================================================================================= */
 
-
-#div-content{
+#div-content {
 	display: flex;
-	/* justify-content: space-around; */
-	height: 87vh;
+	flex: 1; /* Take up remaining space */
 	background-color: #F8F9FA;
 }
 
-#pro-file{
-	background-color: #F8F9FA;
+#pro-file {
+	margin-top: 3vh;
 	width: 15vw;
-	/* width: 50vw; */
-	/* flex-grow: 1; */
-}
-
-#div-middle{
-	width: 60vw;
-	/* flex-grow: 5; */
+	min-width: 12rem;
 	background-color: #F8F9FA;
 }
 
-#div-right{
-	width: 25vw;
-	/* flex-grow: 2; */
+#div-middle {
+	margin-top: 3vh;
+	margin-right: 2vw;
+	width: 50vw;
 	background-color: #F8F9FA;
 }
 
-#footer{
+#div-right {
+	margin-top: 3vh;
+	margin-right: 2vw;
+	width: 35vw;
+	min-width: 25rem;
+	background-color: #F8F9FA;
+}
+
+#footer {
 	width: 100%;
-	height: 5vh;
-	background-color: #F8F9FA;
+	height: 3vh;
+	min-height: 2rem;
 	display: flex;
 	align-items: center;
 	padding-left: 15vw;
+	margin-top: auto; 
+	background-color: #F8F9FA;
 }
 
-#footer p{
+#footer p {
 	margin: 0px;
 	font-size: 0.75rem;
 	color: #C4C4C4;
@@ -196,4 +199,27 @@ b {
 #footer span {
 	font-weight: bold;
 	color: #4FD1C5;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 800px) {
+    #pro-file {
+        display: none;
+    }
+    #div-content {
+        flex-direction: column; /* Stack children vertically */
+        align-items: stretch; /* Ensure children take full width */
+    }
+    #div-middle {
+        width: 100%;
+    }
+    #div-right {
+        display: block; /* Make it visible */
+        width: 100%; /* Full width */
+    }
+    #footer {
+        display: none; /* Hide footer */
+    }
 }

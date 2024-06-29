@@ -1,6 +1,6 @@
 #container {
 	/* background: pink; */
-	padding: 1.5vw 2vw; /* Top/Bottom padding is 1.5, Left/Right padding is 2vw */
+	padding: 0 2vw; /* Top/Bottom padding is 1.5, Left/Right padding is 2vw */
 }
 
 #profile-photo-big {
@@ -120,5 +120,4 @@
 	border-color: white;
 	font-size: 0.7rem;
 }
-
 
