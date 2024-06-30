@@ -8,11 +8,14 @@ export class FirstPage extends HTMLElement {
 
 	template = () => {
 		return `
+			<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 			<link rel="stylesheet" href="./components/firstPage.css">
 			
 			<div id="nav">
-				<p>First Page</p>
-				<button id="loginButton">Login</button>
+				<div id="bg">
+					<button id="loginButton">SIGN IN</button>
+					<p>to join the TOURNAMENT !</p>
+				</div>
 			</div>
 			
 			<div id="gameTag">
@@ -20,7 +23,12 @@ export class FirstPage extends HTMLElement {
 			</div>
 			
 			<div id="footer">
-				<p>Footer</p>
+				<p>
+					@ 2024, Made with 
+					<i class="uil uil-heart-alt"></i> 
+					by 
+					<span>42 Baby Cadet</span>
+				</p>
 			</div>
 		`;
 	}
