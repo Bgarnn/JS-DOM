@@ -13,8 +13,16 @@ export class FirstPage extends HTMLElement {
 			
 			<div id="nav">
 				<div id="bg">
-					<button id="loginButton">SIGN IN</button>
-					<p>to join the TOURNAMENT !</p>
+					<button id="signInButton">SIGN IN</button>
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
+						<!-- Modal content -->
+						<div class="modal-content">
+							<span class="closeModal">&times;</span>
+							<mo-del></mo-del>
+						</div>
+					</div>
+					<p id="text-join">to join the TOURNAMENT !</p>
 				</div>
 			</div>
 			
@@ -35,6 +43,24 @@ export class FirstPage extends HTMLElement {
 
 	connectedCallback() {
 		this.shadowRoot.innerHTML = this.template();
+
+		var modal = this.shadowRoot.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = this.shadowRoot.getElementById("signInButton");
+		// console.log(this.shadowRoot.childNodes[5].getElementsByClassName("closeModal")[0])
+		// Get the <span> element that closes the modal
+		var span = this.shadowRoot.childNodes[5].getElementsByClassName("closeModal")[0];
+
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
 
 		this.shadowRoot.querySelector('#loginButton').addEventListener('click', () => {
 			navigateToForMainPage("/dashboard-page");

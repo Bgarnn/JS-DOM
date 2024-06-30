@@ -15,7 +15,9 @@ import { AccountManagment } from "./components/AccountManagment.js";
 import { FriendsRequest } from "./components/FriendsRequest.js";
 import { Statistic } from "./components/Statistic.js";
 import { BlockedList } from "./components/BlockedList.js";
+import { Modal } from "./components/Modal.js";
 
+customElements.define("mo-del",Modal);
 customElements.define("block-list", BlockedList);
 customElements.define("statis-tic", Statistic);
 customElements.define("friends-request", FriendsRequest);
