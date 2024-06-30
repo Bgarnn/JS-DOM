@@ -9,10 +9,21 @@ export class TournamentStart extends HTMLElement {
 	template = () => {
 		return `
 			<link rel="stylesheet" href="./components/tournamentStart.css">
-			<div>
-				Tournament Start
-				<button>Start</button>
+			<div id="tournament-start">
+				<div id="header">
+					<h4>Tournament</h4>
+				</div>
+				<div id="topic">
+					<p>Start the tournament !</p>
+				</div>
+				<div id="content">
+					<div id="input-name">
+						<input type="text" placeholder="Fill your player name.">
+					</div>
+					<button>Start</button>
+				</div>
 			</div>
+				
 		`;
 	}
 
