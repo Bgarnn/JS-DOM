@@ -10,7 +10,18 @@ export class AccountManagment extends HTMLElement {
 			<link rel="stylesheet" href="./components/AccountManagment.css">
 			
 			<div id="accountManagment">
-				AccountManagment
+				<div id="header">
+					<h4>Account Managment</h4>
+				</div>
+				<div id="topic">
+					<p>Profile</p>
+				</div>
+				<div id="content">
+					<div id="photo">
+						<img src="../images/profile-1.jpg" alt="Profile Photo">
+					</div>
+					<button id="loginButton">Upload Image</button>
+				</div>
 			</div>
 		`;
 	};
@@ -20,6 +31,7 @@ export class AccountManagment extends HTMLElement {
 	}
 
 	disconnectedCallback() {
-		console.log("delete match history components");
+		console.log("delete Account Managment components");
 	}
 }
+
