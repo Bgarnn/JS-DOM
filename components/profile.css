@@ -4,6 +4,7 @@
 }
 
 #profile-photo-big {
+	margin-top: 3vh;
 	width: 100%;              /* Make the div fill the width of its container */
 	padding-top: 100%;        /* Set height equal to width, creating a square */
 	position: relative;       /* Set position relative to contain absolutely positioned children */
@@ -119,5 +120,37 @@
 	background-color: white;
 	border-color: white;
 	font-size: 0.7rem;
+}
+
+@media screen and (max-width: 740px) {
+	#profile-photo-big {
+		display: none;
+	}
+	#profile-name {
+		display: none;
+	}
+	#side-bar {
+		margin-top: 0;
+	}
+	#offline-pong {
+		margin-top: 0;
+		margin-left: 1rem;
+		margin-right: 1rem;
+		display: flex;
+		padding: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	#offline-pong #content {
+		width: 100%;
+		margin-left: 1rem;
+	}
+	#offline-pong .btn {
+		width: 10rem;
+		margin-right: 1rem;
+	}
+	#offline-pong i {
+		margin-left: 1rem;
+	}
+	
 }
 

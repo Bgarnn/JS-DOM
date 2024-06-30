@@ -1,10 +1,8 @@
-import {} from "../index.js"
-
 export class DashBoardPage extends HTMLElement {
-		constructor() {
-				super();
-				this.attachShadow({ mode: "open" });
-		}
+	constructor() {
+		super();
+		this.attachShadow({ mode: "open" });
+	}
 
 		template = () => {
 				return `
@@ -13,6 +11,9 @@ export class DashBoardPage extends HTMLElement {
 
 						<div id="nav-bar">
 								<div id="container">
+										<div id="menu">
+												<i class="uil uil-bars"></i>
+										</div>
 										<div id="logo">
 												<i class="uil uil-window-grid"></i>
 												<h2>DASHBOARD</h2>
@@ -51,9 +52,20 @@ export class DashBoardPage extends HTMLElement {
 				`;
 		}
 
-		connectedCallback() {
-				this.shadowRoot.innerHTML = this.template();
+	toggleProfileVisibility = () => {
+		const profile = this.shadowRoot.getElementById('pro-file');
+		if (profile) {
+			profile.style.display = profile.style.display === 'none' ? 'block' : 'none';
 		}
+	}
+
+	connectedCallback() {
+		this.shadowRoot.innerHTML = this.template();
+		const menuIcon = this.shadowRoot.getElementById('menu');
+		if (menuIcon) {
+			menuIcon.addEventListener('click', this.toggleProfileVisibility);
+		}
+	}
 }
 
 // // import styles from "../components/dashBoardPage.css " assert { type: "css" }

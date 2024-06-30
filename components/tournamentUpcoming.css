@@ -1,5 +1,5 @@
 #tour-upcomimg {
-	height: 14vh; /* Set the height to 14vh */
+	height: 14vh; 
 	min-height: 7rem;
 	display: flex; 
 	align-items: center;
@@ -11,20 +11,20 @@
 #tour-upcomimg span {
 	display: flex;
 	align-items: center;
-	margin-right: 1rem;
 }
 
 #tour-upcomimg #content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center; /* Center content vertically */
+	justify-content: center; 
 	margin-right: auto;
+	margin-left: 2vw;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02); /* Adding shadow */
 }
 
 .btn {
-	margin-top: 0rem;
-	margin-right: 1.5rem;
+	margin-top: 0;
+	margin-right: 2vw;
 	width: 10rem;
 	height: 2rem;
 	text-align: center;
@@ -36,16 +36,16 @@
 }
 
 #tour-upcomimg i {
-	margin-left: 1.5rem;
-	font-size: 2.5rem; /* Increase the font size */
+	margin-left: 2vw;
+	font-size: 2.5rem; 
 	background-color: white;
 	color: #4FD1C5;
 	position: relative;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width: 3rem; /* Increase the width */
-	height: 3rem; /* Increase the height */
+	width: 3rem; 
+	height: 3rem; 
 	border-radius: 0.75rem;
 }
 
@@ -58,4 +58,26 @@
 #tour-upcomimg #content small {
 	color: white;
 	font-size: 0.7rem;
+}
+
+@media screen and (max-width: 740px) {
+	#tour-upcomimg {
+		display: flex;
+		flex-direction: column;
+		align-items: center; 
+		justify-content: center;
+	}
+	#tour-upcomimg span {
+		display: none;
+	}
+	#tour-upcomimg #content {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 1vh;
+	}
+	#tour-upcomimg #content h4 {
+		margin: 0;
+		color: white;
+		font-size: 1rem;
+	}
 }
