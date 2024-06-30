@@ -19,8 +19,7 @@ export class FirstPage extends HTMLElement {
 						<!-- Modal content -->
 						<div class="modal-content">
 							<span class="closeModal">&times;</span>
-							<p>Some text in the Modal..</p>
-							<button id="loginButton">Log In</button>
+							<mo-del></mo-del>
 						</div>
 					</div>
 					<p id="text-join">to join the TOURNAMENT !</p>
