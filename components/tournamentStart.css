@@ -16,6 +16,7 @@
 }
 
 #topic {
+	color: #2D3748;
 	padding-left: 60px;
 }
 
@@ -41,7 +42,7 @@
 	background: transparent;
 	width: 40vw;
 	font-size: 0.9rem;
-	/* color: #2D3748; */
+	color: #2D3748;
 }
 
 #input-name input[type="text"]::placeholder {
