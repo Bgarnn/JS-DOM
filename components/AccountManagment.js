@@ -14,7 +14,7 @@ export class AccountManagment extends HTMLElement {
 					<h4>Account Managment</h4>
 				</div>
 				<div id="topic">
-					<p>Profile</p>
+					<p><b>Profile</b></p>
 				</div>
 				<div id="content">
 					<div id="photo">

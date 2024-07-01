@@ -17,17 +17,17 @@ export class Statistic extends HTMLElement {
 					<a class="menu-item">
 						<span><i class="uil uil-globe"></i></span>
 						<h3>RANK</h3>
-						<p>11</p>
+						<p><b>11</b></p>
 					</a>
 					<a class="menu-item">
 						<span><i class="uil uil-arrow-growth"></i></span>
 						<h3>WIN</h3>
-						<p>5</p>
+						<p><b>5</b></p>
 					</a>
 					<a class="menu-item">
 						<span><i class="uil uil-chart-down"></i></span>
 						<h3>LOSE</h3>
-						<p>2</p>
+						<p><b>2</b></p>
 					</a>
 				</div>
 			</div>
