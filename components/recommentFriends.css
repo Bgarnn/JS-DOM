@@ -17,7 +17,8 @@
 table {
 	width: 100%;
 	border-radius: 0.75rem;
-	padding: 0 1rem 1rem 1rem;
+	padding-left: 7vw;
+	padding-right: 7vw;
 	text-align: center;
 }
 
@@ -26,7 +27,7 @@ table tbody td {
 	height: 3rem;
 	border-bottom: 1px solid rgba(132, 139, 200, 0.18);
 	color: #677483;
-	padding-left: 5vw; 
+	padding-left: 2vw; 
 }
 
 table tbody tr:first-child td {
@@ -57,7 +58,7 @@ table tbody tr:first-child td {
 
 button {
 	margin-top: 0rem;
-	width: 10rem;
+	width: 9rem;
 	height: 2rem;
 	text-align: center;
 	border-radius: 0.75rem;
