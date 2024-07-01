@@ -85,6 +85,12 @@ export class Friends extends HTMLElement {
 		this.shadowRoot.querySelector('#findFriendsButton').addEventListener('click', () => {
 			changeNotification("recommends-friends");
 		});
+
+		this.shadowRoot.querySelectorAll('.uil-user').forEach(icon => {
+			icon.addEventListener('click', () => {
+				changeNotification("friend-profile");
+			});
+		});
 	}
 
 }
