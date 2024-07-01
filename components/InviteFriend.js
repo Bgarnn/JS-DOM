@@ -62,6 +62,6 @@ export class InviteFriend extends HTMLElement {
 	}
 
 	disconnectedCallback() {
-		console.log("delete blocked list components");
+		console.log("delete invite-friend components");
 	}
 }
