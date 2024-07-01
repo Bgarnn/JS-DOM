@@ -49,7 +49,7 @@ export class InviteFriend extends HTMLElement {
 					</div>
 				</td>
 				<td>
-					<p class="${list.status === 'Ready' ? 'status-ready' : list.status === 'Waiting' ? 'status-waiting' : 'status-offline'}">
+					<p class="${list.status === 'Ready' ? 'status-ready' : list.status === 'Waiting' ? 'status-waiting' : 'status-waiting'}">
 						${list.status}
 					</p>
 				</td>
