@@ -91,6 +91,12 @@ export class Friends extends HTMLElement {
 				changeNotification("friend-profile");
 			});
 		});
+
+		this.shadowRoot.querySelectorAll('.uil-upload').forEach(icon => {
+			icon.addEventListener('click', () => {
+				changeNotification("invite-friend");
+			});
+		});
 	}
 
 }

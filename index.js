@@ -16,10 +16,12 @@ import { FriendProfile } from "./components/FriendProfile.js";
 import { FriendsRequest } from "./components/FriendsRequest.js";
 import { Statistic } from "./components/Statistic.js";
 import { BlockedList } from "./components/BlockedList.js";
+import { InviteFriend } from "./components/InviteFriend.js";
 import { Modal } from "./components/Modal.js";
 
 customElements.define("mo-del",Modal);
 customElements.define("block-list", BlockedList);
+customElements.define("invite-friend", InviteFriend);
 customElements.define("statis-tic", Statistic);
 customElements.define("friends-request", FriendsRequest);
 customElements.define("account-managment", AccountManagment);
