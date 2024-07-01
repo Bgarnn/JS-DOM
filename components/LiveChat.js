@@ -9,7 +9,9 @@ export class LiveChat extends HTMLElement {
 			<link rel="stylesheet" href="./components/liveChat.css">
 			
 			<div id="liveChat">
-				Live Chat
+				<div id="header">
+					<h4>Live Chat</h4>
+				</div>
 			</div>
 		`;
 	}
