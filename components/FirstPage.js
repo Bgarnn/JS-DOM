@@ -13,13 +13,27 @@ export class FirstPage extends HTMLElement {
 			
 			<div id="nav">
 				<div id="bg">
-					<button id="signInButton">SIGN IN</button>
-					<!-- The Modal -->
-					<div id="myModal" class="modal">
-						<!-- Modal content -->
+					<button id="signIn-btn">SIGN IN</button>
+					<div id="loginModal" class="modal">
 						<div class="modal-content">
-							<span class="closeModal">&times;</span>
-							<mo-del></mo-del>
+							<div class="closeIcon">
+								<i class="uil uil-times"></i>
+							</div>
+							<login-modal></login-modal>
+							<div class="bottom-text">
+								<p>Don't have an account? <span id="signUp-text"><b>Sign Up</b></span></p>
+							</div>
+						</div>
+					</div>
+					<div id="registerModal" class="modal">
+						<div class="modal-content">
+							<div class="closeIcon">
+								<i class="uil uil-times"></i>
+							</div>
+							<register-modal></register-modal>
+							<div class="bottom-text">
+								<p>Already have an account? <span id="signIn-text"><b>Sign In</b></span></p>
+							</div>
 						</div>
 					</div>
 					<p id="text-join">to join the TOURNAMENT !</p>
@@ -44,74 +58,38 @@ export class FirstPage extends HTMLElement {
 	connectedCallback() {
 		this.shadowRoot.innerHTML = this.template();
 
-		var modal = this.shadowRoot.getElementById("myModal");
+		var loginBtn = this.shadowRoot.getElementById("signIn-btn");
+		var loginText = this.shadowRoot.getElementById("signIn-text");
+		var loginModal = this.shadowRoot.getElementById("loginModal");
+		var registerText = this.shadowRoot.getElementById("signUp-text");
+		var registerModal = this.shadowRoot.getElementById("registerModal");
+		var closeLogin = this.shadowRoot.childNodes[5].getElementsByClassName("closeIcon")[0];
+		var closeRegister = this.shadowRoot.childNodes[5].getElementsByClassName("closeIcon")[1];
 
-		// Get the button that opens the modal
-		var btn = this.shadowRoot.getElementById("signInButton");
-		// console.log(this.shadowRoot.childNodes[5].getElementsByClassName("closeModal")[0])
-		// Get the <span> element that closes the modal
-		var span = this.shadowRoot.childNodes[5].getElementsByClassName("closeModal")[0];
-
-		// When the user clicks the button, open the modal 
-		btn.onclick = function() {
-			modal.style.display = "block";
+		loginBtn.onclick = function() {
+			loginModal.style.display = "flex";
 		}
 
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() {
-			modal.style.display = "none";
+		loginText.onclick = function() {
+			loginModal.style.display = "flex";
+			registerModal.style.display = "none";
 		}
 
-		this.shadowRoot.querySelector('#loginButton').addEventListener('click', () => {
-			navigateToForMainPage("/dashboard-page");
-		});
+		closeLogin.onclick = function() {
+			loginModal.style.display = "none";
+		}
+
+		registerText.onclick = function() {
+			loginModal.style.display = "none";
+			registerModal.style.display = "flex";
+		}
+
+		closeRegister.onclick = function() {
+			registerModal.style.display = "none";
+		}
+
+		// this.shadowRoot.querySelector('#loginButton').addEventListener('click', () => {
+		// 	navigateToForMainPage("/dashboard-page");
+		// });
 	}
 }
-
-// import {navigateToForMainPage} from "../index.js"
-
-// export class FirstPage extends HTMLElement{
-//     constructor(){
-//         super();
-//     }
-		
-//     connectedCallback(){
-//         this.shadow = this.attachShadow({ mode: "open" });
-//         this.div = document.createElement("div");
-//         this.div.setAttribute("id","firstPage")
-
-//         const css = document.createElement("link");
-//         css.setAttribute("rel","stylesheet");
-//         css.setAttribute("href","./components/firstPage.css");
-
-//         this.textElement = document.createElement("p");
-//         this.textElement.textContent = "First Page";
-//         this.loginElement = document.createElement("button");
-//         this.loginElement.textContent = "Login";
-//         this.loginElement.addEventListener("click", () => {
-//           navigateToForMainPage("/dashboard-page");
-//         });
-
-//         this.div.appendChild(css)
-//         this.div.appendChild(this.textElement)
-//         this.div.appendChild(this.loginElement)
-
-//         this.shadow.appendChild(this.div)
-//         let divGame = document.createElement("div")
-//         divGame.setAttribute("id","gameTag");
-//         this.gameElement = document.createElement("p");
-//         this.gameElement.textContent = "Game";
-
-//         divGame.appendChild(this.gameElement)
-
-		
-//         this.shadow.appendChild(divGame)
-
-//         const divFooter = document.createElement("div")
-//         divFooter.setAttribute("id","footer");
-//         this.gameElement = document.createElement("p");
-//         this.gameElement.textContent = "Footer"; 
-//         divFooter.appendChild(this.gameElement)
-//         this.shadow.appendChild(divFooter)
-//     }
-// }

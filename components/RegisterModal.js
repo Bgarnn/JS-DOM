@@ -1,4 +1,4 @@
-export class Tournament extends HTMLElement {
+export class RegisterModal extends HTMLElement {
 	constructor() {
 		super();
 		this.attachShadow({ mode: "open" });
@@ -6,10 +6,12 @@ export class Tournament extends HTMLElement {
 
 	template = () => {
 		return `
-			<link rel="stylesheet" href="./components/tournament.css">
-			<div><tournament-upcoming></tournament-upcoming></div>
+			<link rel="stylesheet" href="./components/RegisterModal.css">
+			<div>
+				Register modal
+			</div>
 		`;
-	};
+	}
 
 	connectedCallback() {
 		this.shadowRoot.innerHTML = this.template();
