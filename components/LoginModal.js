@@ -12,11 +12,11 @@ export class LoginModal extends HTMLElement {
 					<form action="" id="signInForm">
 						<h3>Welcome Back</h3>
 						<h4 class="gray">Enter your username and password to sign in</h4>
-						<div id="username">
+						<div id="username-con">
 							<label for="username">Username</label>
 							<input class="input-css" type="text" placeholder="Your username" id="username">
 						</div>
-						<div id="password">
+						<div id="password-con">
 							<label for="password">Password</label>
 							<input class="input-css" type="password" placeholder="Your password" id="password">
 						</div>

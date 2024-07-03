@@ -58,5 +58,5 @@ export function navigateToForMainPage(path) {
 	}
 }
 
-// navigateToForMainPage("/first-page")
-navigateToForMainPage("/dashboard-page");
+navigateToForMainPage("/first-page")
+// navigateToForMainPage("/dashboard-page");
