@@ -1,4 +1,4 @@
-#container {
+#signUpForm {
 	display: flex;
 	flex-direction: column;
     justify-content: center; 
@@ -50,7 +50,7 @@ h3 {
 	display: none;
 }
 
-#signUpForm {
+#Form {
 	margin-top: 1rem;
 }
 

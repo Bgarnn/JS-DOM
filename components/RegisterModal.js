@@ -7,7 +7,7 @@ export class RegisterModal extends HTMLElement {
 	template = () => {
 		return `
 			<link rel="stylesheet" href="./components/RegisterModal.css">
-			<div  id="container">
+			<form action="" id="signUpForm">
 				<h3>Sign Up</h3>
 				<div id="photo">
 					<img src="../images/profile-default.png" alt="profile default" id="profile-pic">
@@ -16,20 +16,18 @@ export class RegisterModal extends HTMLElement {
 					<label for="input-file">Upload Image</label>
 					<input type="file" accept="image/jpeg, image/jpg, image/png" id="input-file">
 				</div>
-				<div>
-					<form action="" id="signUpForm">
-						<div id="username-con">
-							<label for="username">Username</label>
-							<input class="input-css" type="text" placeholder="username" id="username">
-						</div>
-						<div id="password-con">
-							<label for="password">Password</label>
-							<input class="input-css" type="password" placeholder="password" id="password">
-						</div>
-						<button type="submit">SIGN UP</button>
-					</form>
+				<div id="Form">
+					<div id="username-con">
+						<label for="username">Username</label>
+						<input class="input-css" type="text" placeholder="username" id="username">
+					</div>
+					<div id="password-con">
+						<label for="password">Password</label>
+						<input class="input-css" type="password" placeholder="password" id="password">
+					</div>
+					<button type="submit">SIGN UP</button>
 				</div>
-			</div>
+			</form>
 		`;
 	}
 
