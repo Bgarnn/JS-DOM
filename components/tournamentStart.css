@@ -31,15 +31,11 @@
 	margin: 0 4vw;
 }
 
-#input-name {
+#input-name input[type="text"] {
 	background: #F8F9FA;
 	border-radius: 2rem;
 	padding: 0.6rem 1rem;
 	border: 2px solid #4FD1C5;
-}
-
-#input-name input[type="text"] {
-	background: transparent;
 	width: 40vw;
 	font-size: 0.9rem;
 	color: #2D3748;
